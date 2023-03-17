@@ -182,7 +182,7 @@ SELECT program_id, program_name ,program_location
 FROM programs
 WHERE program_location = 'Belize City';
 
---5. What courses does Mrs. Vernelle Sylvester teach?//check
+--5. What courses does Mrs. Vernelle Sylvester teach?
 SELECT C.course_id,C.code,C.year,C.section, C.title,I.instructor_id,I.instructor_name
 FROM courses AS C
 JOIN instructors AS I
@@ -195,7 +195,7 @@ SELECT instructor_id, instructor_name, degree
 FROM instructors
 WHERE degree = 'M.Sc.';
 
---7. What are the prerequisites for Programming 2? //wrong 
+--7. What are the prerequisites for Programming 2? 
 SELECT c1.course_id,c1.code,c1.year,c1.section,pr.course_id,c1.title,pr.prereq_id
 FROM courses c1
 JOIN pre_requisites pr ON c1.course_id = pr.course_id
